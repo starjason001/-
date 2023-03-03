@@ -17,10 +17,12 @@ void Test1(int input1)
 {
    puts("이 함수는 Test1입니다.");
 }
+
 void Test2(int input2)
 {
    puts("이 함수는 Test2입니다.");
 }
+
 void Test3(int input3)
 {
    puts("이 함수는 Test3입니다.");
@@ -28,6 +30,7 @@ void Test3(int input3)
 
  int main(void)
 {
+
    void(*ptarray[3])(int) = {
       Test1,Test2,Test3 
    }; //함수 포인터의 배열(LUT)
