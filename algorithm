@@ -1,0 +1,35 @@
+/*
+함수 포인터의 배열을 Look Up Table로 활용하여 
+(switch-case를 활용한 코드보다) 고성능 코드 작성하기.
+*/
+
+
+#include <stdio.h>
+
+
+void TestFunc1(int nParam)
+{
+   puts("1");
+}
+void TestFunc2(int nParam)
+{
+   puts("2");
+}
+void TestFunc3(int nParam)
+{
+   puts("3");
+}
+ int main(void)
+    
+{
+   void(*pfList[3])(int) = {
+      TestFunc1,TestFunc2,TestFunc3 
+   }; //함수 포인터의 배열(LUT)
+
+   int Input;
+   scanf_s("%d", &Input);
+   
+   pfList[Input](10);
+
+   return 0;
+}
