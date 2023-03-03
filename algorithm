@@ -35,7 +35,7 @@ void Test3(int input3)
    int input;
    scanf_s("%d", &input);
    
-   ptarray[input](10);
+   ptarray[input](0);
 
    return 0;
 }
